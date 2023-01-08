@@ -7,4 +7,7 @@ dist/
 .prettierignore
 .prettierrc
 .nvmrc
+.git
+.gitignore
 nodemon.json
+README.md

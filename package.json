@@ -21,7 +21,10 @@
         "test": "./node_modules/.bin/jest -c jest.config.js",
         "test:unit": "./node_modules/.bin/jest -c jest.config.js --selectProjects unit",
         "test:integration": "./node_modules/.bin/jest -c jest.config.js --selectProjects integration",
-        "test:e2e": "./node_modules/.bin/jest -c jest.config.js --selectProjects e2e"
+        "test:e2e": "./node_modules/.bin/jest -c jest.config.js --selectProjects e2e",
+        "build:docker": "docker build -t calculator-backend .",
+        "start:docker": "nohup docker run --expose 8081 -p 8081:8081 calculator-backend > /tmp/docker.out 2>&1 &",
+        "docker": "npm run build:docker && npm run start:docker"
     },
     "repository": {
         "type": "git",
