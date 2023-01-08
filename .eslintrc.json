@@ -19,9 +19,17 @@
     "parserOptions": {
         "ecmaVersion": 2022,
         "sourceType": "module",
-        "project": [ "./tsconfig.json" ]
+        "project": ["./tsconfig.json"]
     },
-    "ignorePatterns": [ "node_modules", "dist", "build", ".vscode", ".husky", "coverage", "*.config.js" ],
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "build",
+        ".vscode",
+        ".husky",
+        "coverage",
+        "*.config.js"
+    ],
     "plugins": ["@typescript-eslint", "prettier", "jest"],
     "rules": {
         "prettier/prettier": [
@@ -34,20 +42,20 @@
         "no-shadow": "off",
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
-        "max-depth": [ "error", 3 ],
+        "max-depth": ["error", 3],
         "require-yield": "warn",
         "curly": "warn",
         "no-fallthrough": "warn",
         "no-return-await": "warn",
         "require-await": "off",
-        "no-void": [ "error" ],
+        "no-void": ["error"],
         "sort-imports": [
             "warn",
             {
                 "ignoreCase": false,
                 "ignoreDeclarationSort": true,
                 "ignoreMemberSort": false,
-                "memberSyntaxSortOrder": [ "none", "all", "multiple", "single" ],
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
                 "allowSeparatedGroups": false
             }
         ],
@@ -57,7 +65,7 @@
         "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/return-await": [ "warn", "in-try-catch" ],
+        "@typescript-eslint/return-await": ["warn", "in-try-catch"],
         "@typescript-eslint/require-await": "warn",
         "@typescript-eslint/no-unused-vars": [
             "warn",

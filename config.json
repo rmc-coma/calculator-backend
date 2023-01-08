@@ -4,7 +4,7 @@
         "allowedOrigin": "http://localhost:3000",
         "varyingOrigin": false,
         "allowCredentials": false,
-        "allowedMethods": [ "GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS" ],
+        "allowedMethods": ["GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS"],
         "allowedHeaders": [
             "Origin",
             "Content-Type",
