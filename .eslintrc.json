@@ -8,7 +8,9 @@
     },
     "extends": [
         "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:prettier/recommended",
         "plugin:jest/recommended",
         "plugin:jest/style"
@@ -16,9 +18,10 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2022,
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": [ "./tsconfig.json" ]
     },
-    "ignorePatterns": ["node_modules", "dist", "build"],
+    "ignorePatterns": [ "node_modules", "dist", "build", ".vscode", ".husky", "coverage", "*.config.js" ],
     "plugins": ["@typescript-eslint", "prettier", "jest"],
     "rules": {
         "prettier/prettier": [
@@ -27,22 +30,39 @@
                 "printWidth": 92 // Needs to be synchronized with .editorconfig for some reason
             }
         ],
+        "no-shadow-restricted-names": "error",
+        "no-shadow": "off",
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-inferrable-types": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "require-await": "warn",
+        "max-depth": [ "error", 3 ],
         "require-yield": "warn",
+        "curly": "warn",
+        "no-fallthrough": "warn",
+        "no-return-await": "warn",
+        "require-await": "off",
+        "no-void": [ "error" ],
         "sort-imports": [
             "warn",
             {
                 "ignoreCase": false,
                 "ignoreDeclarationSort": true,
                 "ignoreMemberSort": false,
-                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                "memberSyntaxSortOrder": [ "none", "all", "multiple", "single" ],
                 "allowSeparatedGroups": false
+            }
+        ],
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/return-await": [ "warn", "in-try-catch" ],
+        "@typescript-eslint/require-await": "warn",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                "argsIgnorePattern": "^_*$"
             }
         ]
     },

@@ -1,0 +1,42 @@
+{
+    "port": 8081,
+    "cors": {
+        "allowedOrigin": "http://localhost:3000",
+        "varyingOrigin": false,
+        "allowCredentials": false,
+        "allowedMethods": [ "GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS" ],
+        "allowedHeaders": [
+            "Origin",
+            "Content-Type",
+            "Content-Length",
+            "Accept",
+            "Accept-Encoding",
+            "Accept-Language",
+            "Cache-Control",
+            "Connection",
+            "Host",
+            "Pragma",
+            "Referer",
+            "User-Agent",
+            "Cookie",
+            "X-API-KEY"
+        ],
+        "exposedHeaders": [
+            "Cache-Control",
+            "Pragma",
+            "Connection",
+            "Content-Length",
+            "Content-Type",
+            "Date",
+            "ETag",
+            "Keep-Alive",
+            "X-Powered-By",
+            "WWW-Authenticate",
+            "Retry-After",
+            "session",
+            "sessionID",
+            "sessionStore"
+        ],
+        "maxAge": 86400
+    }
+}

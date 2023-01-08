@@ -1,0 +1,6 @@
+POST {{protocol}}://{{host}}:{{port}}/v1/calculator HTTP/1.1
+content-type: application/json
+
+{
+    "terms": [2, "*", 2.5, "-", 2, "/", 2, "+", 3, "*", 4, "*", 2, "/", 2, "+", 13, "*", 2]
+}

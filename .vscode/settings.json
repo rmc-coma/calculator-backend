@@ -162,5 +162,12 @@
     "jestRunIt.jestConfigPath": "jest.config.js",
     "jestRunIt.updateSnapshotsLabel": "Update snapshot 👍",
     "jestRunIt.runTestLabel": "Run 🏃‍♂️",
-    "jestRunIt.debugTestLabel": "Debug 🐞"
+    "jestRunIt.debugTestLabel": "Debug 🐞",
+    "rest-client.environmentVariables": {
+        "local": {
+            "protocol": "http",
+            "host": "localhost",
+            "port": "8081",
+        },
+    }
 }
