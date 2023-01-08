@@ -1,7 +1,7 @@
 {
     "port": 8081,
     "cors": {
-        "allowedOrigin": "http://localhost:3000",
+        "allowedOrigin": "http://localhost:4200",
         "varyingOrigin": false,
         "allowCredentials": false,
         "allowedMethods": ["GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS"],

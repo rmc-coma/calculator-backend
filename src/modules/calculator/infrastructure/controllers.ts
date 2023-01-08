@@ -7,10 +7,10 @@ function postEquation(
         {
             [key: string]: string;
         },
-        string,
+        { result: number },
         { terms: Array<number | "+" | "-" | "*" | "/"> } | undefined
     >,
-    response: Response<string>,
+    response: Response<{ result: number }>,
     next: (err?: unknown) => void
 ): void {
     if (!CalculatorDomain.Validators.validateCalculateInput(request.body?.terms)) {
@@ -22,7 +22,7 @@ function postEquation(
         return;
     }
     const result = CalculatorDomain.Service.calculate(request.body!.terms);
-    response.status(200).send(result.toString());
+    response.status(200).send({ result });
     next();
 }
 

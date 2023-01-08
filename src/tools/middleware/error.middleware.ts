@@ -30,5 +30,5 @@ export const createErrorHandler: () => ErrorRequestHandler =
             error = new InternalServerErrorHttpError();
         }
         console.error(error);
-        response.status(error.code).send(error);
+        response.status(error.code).send(error.message);
     };
